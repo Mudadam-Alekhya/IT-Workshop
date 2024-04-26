@@ -1,0 +1,192 @@
+$ cat> file.txt  \\Creates new file
+Welcome to ubuntu
+linux and unix commands
+rgukt is loacated in basar
+this is unix
+----------------------------------------------------------------------------------
+$ cat file.txt  \\shows the content in the file
+Welcome to ubuntu
+linux and unix commands
+rgukt is loacated in basar
+this is unix
+----------------------------------------------------------------------------------
+$ grep -v "one" file.txt \\grep : used for searching and manipulating text patterns within files \\-v: This prints out all the lines that do not matches the pattern
+Welcome to ubuntu
+linux and unix commands
+rgukt is loacated in basar
+this is unix
+$ grep -v "unix" file.txt
+Welcome to ubuntu
+rgukt is loacated in basar
+----------------------------------------------------------------------------------
+$ grep -o "l" file.txt \\-l: Displays list of a filenames only.
+l
+l
+l
+----------------------------------------------------------------------------------
+$ grep -e "unix" -e "linux" file.txt \\-e : Specifies expression with this option. Can use multiple times.
+linux and unix commands
+this is unix
+----------------------------------------------------------------------------------
+$ grep -h "welcome" file.text  \\-h: Display the matched lines, but do not display the filenames.
+grep: file.text: No such file or directory
+$ grep -h "welcome" file.txt
+$ grep -h "ubuntu" file.txt
+Welcome to ubuntu
+----------------------------------------------------------------------------------
+$ grep -n "ubuntu" file.txt  \\-n: Display the matched lines and their line numbers.
+1:Welcome to ubuntu
+-----------------------------------------------------------------------------------
+$ cat> months.txt  \\created new file
+febraury
+may
+june
+august
+december
+november
+january
+----------------------------------------------------------------------------------
+$ cat months.txt  \\showing months file 
+febraury
+may
+june
+august
+december
+november
+january
+------------------------------------------------------------------------------------
+$ sort months.txt  \\sort command is used to sort the lines of a text file or input stream
+august
+december
+febraury
+january
+june
+may
+november
+----------------------------------------------------------------------------------
+$ sort -M months.txt  \\sorted according to months
+january
+febraury
+may
+june
+august
+november
+december
+----------------------------------------------------------------------------------
+$ cat > numbers.txt  \\created numbers file
+8
+0
+9
+12
+34
+23
+65
+89
+09
+13
+48
+90
+68
+----------------------------------------------------------------------------------
+$ sort -n numbers.txt  \\-n: Sorts a file numerically
+0
+8
+09
+9
+12
+13
+23
+34
+48
+65
+68
+89
+90
+---------------------------------------------------------------------------------
+$ sort numbers.txt
+0
+09
+12
+13
+23
+34
+48
+65
+68
+8
+89
+9
+90
+--------------------------------------------------------------------------------
+$ sort -u numbers.txt  \\-u: Sorts and removes duplicate lines, providing a unique sorted list.
+0
+09
+12
+13
+23
+34
+48
+65
+68
+8
+89
+9
+90
+------------------------------------------------------------------------------------
+$ cat > sedfile.txt  \\created a sed file
+The aim of this module is to explain the basic features of
+monopolistic competition. After reading this unit you will be able
+to understand:
+Meaning of monopolistic competition
+Characteristics of monopolistic competition
+Nature of demand curves
+Equilibrium under monopolistic competition
+-------------------------------------------------------------------------------------
+$ sed 's/aim/AIM/' sedfile.txt  \\Can do insertion, deletion,search and replace(substitution).
+The AIM of this module is to explain the basic features of
+monopolistic competition. After reading this unit you will be able
+to understand:
+Meaning of monopolistic competition
+Characteristics of monopolistic competition
+Nature of demand curves
+Equilibrium under monopolistic competition
+----------------------------------------------------------------------------------
+$ sed '/AIM/d' sedfile.txt  \\repalces with previous one after change, deletes the word before change
+The aim of this module is to explain the basic features of
+monopolistic competition. After reading this unit you will be able
+to understand:
+Meaning of monopolistic competition
+Characteristics of monopolistic competition
+Nature of demand curves
+Equilibrium under monopolistic competition
+-----------------------------------------------------------------------------------
+$ sed '/aim/d' sedfile.txt  \\deleted aim
+monopolistic competition. After reading this unit you will be able
+to understand:
+Meaning of monopolistic competition
+Characteristics of monopolistic competition
+Nature of demand curves
+Equilibrium under monopolistic competition
+----------------------------------------------------------------------------------
+$ cat> awkfile.txt  \\creted an awkfile
+paranathi storage id 4332
+vicky window id 5678
+manas unix id 8888
+shravan ubuntu id 4567
+----------------------------------------------------------------------------------
+$ awk '{print $3,$4}' awkfile.txt  \\to show particular column and row data
+id 4332
+id 5678
+id 8888
+id 4567
+----------------------------------------------------------------------------------
+$ awk '/paranathi/ {print $3,$4}' awkfile.txt
+id 4332
+$ awk '/manas/ {print $3,$4}' awkfile.txt
+id 8888
+$ awk '/manas/ {print $3}' awkfile.txt
+id
+$ awk '/manas/ {print}' awkfile.txt
+manas unix id 8888
+$ awk '{print NR}' awkfile.txt  \\To count the lines in a file
+1
