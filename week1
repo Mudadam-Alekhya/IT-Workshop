@@ -1,0 +1,64 @@
+UNIX USER COMMANDS------
+
+whoami – show your username
+
+id – print user identity
+
+groups – show which groups user belongs to
+
+passwd – change user password
+
+who – find out who is logged into the system
+
+last – show history of logins into the system Unix file operations
+
+Navigating filesystem and managing files and access permissions:
+nslookup google.com – server address
+
+cp – copy files (work in progress)
+
+rm – remove files and directories (work in progress)
+
+mv – rename or move files and directories to another location
+
+echo – “hello world”
+
+chown – change file/directory ownership
+---------------------------------------------------------------------------------------
+
+
+Navigating filesystems and managing directories:
+
+•cd – change directory
+•pwd – confirm current directory
+•mkdir – make new directory
+•rmdir – remove directories in Unix
+---------------------------------------------------------------------------------------------
+Control Commands:
+These commands are a two-key combination where a letter is pressed simultaneously with
+the ‘Ctrl’ key.
+•Control-C: This command terminates the currently running foreground process.
+
+•Control-D: This command terminates the currently running login or terminal
+
+•Control-Z: This command suspends the currently running foreground process to the background.
+---------------------------------------------------------------------------------------------
+Week1 Task
+1)How to Create a File?
+touch name.txt
+
+2) How to view the list of Commands executed?
+history
+
+3) How to view your username in Unix?
+whoami
+
+4) List some of the common and most widely used UNIX commands.?
+ touch filename.txt-used to create file
+ cat >filename.txt-to write the content in file
+ nano filename.txt-to display the content in the file
+
+5) How to Remove files using unix commands?
+rm filename.txt
+6) Create a RGUKT new file
+touch RGUKT.txt
