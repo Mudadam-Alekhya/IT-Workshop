@@ -7,7 +7,7 @@ this is unix
 $ cat file.txt  \\shows the content in the file
 Welcome to ubuntu
 linux and unix commands
-rgukt is loacated in basar
+rgukt is loacated in basar.
 this is unix
 ----------------------------------------------------------------------------------
 $ grep -v "one" file.txt \\grep : used for searching and manipulating text patterns within files \\-v: This prints out all the lines that do not matches the pattern
